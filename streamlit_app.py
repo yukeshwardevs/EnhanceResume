@@ -1,9 +1,6 @@
 from google import genai
 from google.genai import types
-import pathlib
-import httpx
 import streamlit as st
-import json
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -68,16 +65,9 @@ if st.session_state["pdf_bytes"] is not None:
                 - Tips for tailoring the resume toward a specific industry or company.
 
                 ---
-
-                Output Format:
-                Provide your review and suggestions with example changes in the following structure:
-
-                1. Summary of Overall Impression
-                2. Detailed Analysis by Section (Structure, Clarity, Content, Effectiveness, Tailoring)
-                3. Constructive Suggestions for Improvement
-                4. Sample Rewrite Snippets (Rewrite 1–2 weak bullet points or summary lines as examples)
-                5. Optional Industry-Specific Tailoring Advice
-
+                Provide your review and suggestions with example changes.
+                Output should be sturctured and formatted for easy reading, using bullet points and headings where appropriate.
+                Avoid generic phrases and focus on specific, actionable advice.
                 ---
 
                 Tone: Professional, encouraging, specific, and focused on helping the candidate succeed.
